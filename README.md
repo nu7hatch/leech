@@ -9,7 +9,7 @@ machines.
 
 You can install Leach directly from rubygems:
 
-    gem install leach 
+    gem install leech 
     
 ## Gettings started
 
