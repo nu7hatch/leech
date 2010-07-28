@@ -114,8 +114,8 @@ Client will be implemented in 0.2.0 version.
 ## Links
 
 * [Author blog](http://neverendingcoding.com/)
-* [YARD documentation](http://yardoc.org/docs/Leech)
-* [Changelog](http://yardoc.org/doc/file:CHANGELOG.md)
+* [YARD documentation](http://yardoc.org/docs/kriss-leech)
+* [Changelog](http://yardoc.org/docs/kriss-leech/file:CHANGELOG.md)
 
 ## Note on Patches/Pull Requests
  
