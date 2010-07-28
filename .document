@@ -1,4 +1,6 @@
-README.rdoc
+README.md
+CHANGELOG.md
+TODO.md
 lib/**/*.rb
 bin/*
 features/**/*.feature

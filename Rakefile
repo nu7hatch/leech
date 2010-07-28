@@ -5,8 +5,9 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "leech"
-    gem.summary = %Q{}
-    gem.description = %Q{}
+    gem.summary = %Q{Simple TCP client/server framework with commands handling}
+    gem.description = %Q{Leech is simple TCP client/server framework. Server is
+    similar to rack. It allows to define own handlers for received text commands. }
     gem.email = "kriss.kowalik@gmail.com"
     gem.homepage = "http://github.com/kriss/leech"
     gem.authors = ["Kriss Kowalik"]
@@ -34,12 +35,16 @@ task :spec => :check_dependencies
 
 task :default => :spec
 
-require 'rake/rdoctask'
-Rake::RDocTask.new do |rdoc|
-  version = File.exist?('VERSION') ? File.read('VERSION') : ""
-
-  rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "leech #{version}"
-  rdoc.rdoc_files.include('README*')
-  rdoc.rdoc_files.include('lib/**/*.rb')
+begin
+  require 'yard'
+  YARD::Rake::YardocTask.new do |t|
+    version   = File.exist?('VERSION') ? File.read('VERSION') : ""
+    title     = "Leech #{version}"
+    t.files   = ['lib/**/*.rb', 'README*']
+    t.options = ['--title', title, '--markup', 'markdown', '--files', 'CHANGELOG.md,TODO.md']
+  end
+rescue LoadError
+  task :yard do
+    abort "YARD is not available. In order to run yardoc, you must: sudo gem install yard"
+  end
 end
