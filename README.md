@@ -1,4 +1,4 @@
-# Leech 
+# Leech framework
 
 Leech is simple TCP client/server framework. Server is similar to rack, 
 but is designed for asynchronously handling a short text commands. It can
@@ -114,7 +114,7 @@ Client will be implemented in 0.2.0 version.
 ## Links
 
 * [Author blog](http://neverendingcoding.com/)
-* [YARD documentation](http://yardoc.org/doc/Leech)
+* [YARD documentation](http://yardoc.org/docs/Leech)
 * [Changelog](http://yardoc.org/doc/file:CHANGELOG.md)
 
 ## Note on Patches/Pull Requests

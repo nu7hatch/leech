@@ -37,12 +37,7 @@ task :default => :spec
 
 begin
   require 'yard'
-  YARD::Rake::YardocTask.new do |t|
-    version   = File.exist?('VERSION') ? File.read('VERSION') : ""
-    title     = "Leech #{version}"
-    t.files   = ['lib/**/*.rb', 'README*']
-    t.options = ['--title', title, '--markup', 'markdown', '--files', 'CHANGELOG.md,TODO.md']
-  end
+  YARD::Rake::YardocTask.new
 rescue LoadError
   task :yard do
     abort "YARD is not available. In order to run yardoc, you must: sudo gem install yard"
